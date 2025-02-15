@@ -1,0 +1,28 @@
+#cloud-config
+autoinstall:
+    version: 1
+    identity:
+        realname: 'SEU NOME'
+        hostname: ubuntu-desktop
+        username: SEU LOGIN
+        password: 'SENHA CRIADA'
+    locale: pt_BR.utf8
+    keyboard:
+        layout: br
+    timezone: "America/Sao_Paulo"   
+    packages:
+        - libreoffice
+        - gimp
+        - git
+        - wget
+    snaps:
+        - name: spotify
+          channel: stable
+          classic: false
+    codecs:
+        install: true
+    drivers:
+        install: true
+    updates: all
+    shutdown: reboot
+
